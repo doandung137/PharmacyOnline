@@ -1,0 +1,229 @@
+﻿@model PharmacyOnline.Areas.Admin.Models.Product
+
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Areas/Admin/Views/Shared/_LayoutAdmin.cshtml";
+}
+<div class="content">
+    <div class="container-fluid">
+        @using (Html.BeginForm())
+        {
+            @Html.AntiForgeryToken()
+            <div class="row">
+                <div class="col-md-11">
+                    <div class="card">
+                        <div class="card-header card-header-primary">
+                            <h4 class="card-title">Thêm danh mục sản phẩm</h4>
+                            <p class="card-category">Hoàn thành thêm các thông tin</p>
+                        </div>
+                        <br />
+                        <div class="card-body">
+                            <form>
+                                <div class="row">
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            @Html.LabelFor(model => model.Name, htmlAttributes: new { @class = "bmd-label-floating" })
+                                            @Html.EditorFor(model => model.Name, new { htmlAttributes = new { @class = "form-control" } })
+                                            @Html.ValidationMessageFor(model => model.Name, "", new { @class = "text-danger" })
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            @Html.LabelFor(model => model.Price, htmlAttributes: new { @class = "bmd-label-floating" })
+                                            @Html.EditorFor(model => model.Price, new { htmlAttributes = new { @class = "form-control" } })
+                                            @Html.ValidationMessageFor(model => model.Price, "", new { @class = "text-danger" })
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            @Html.LabelFor(model => model.Qty, htmlAttributes: new { @class = "bmd-label-floating" })
+                                            @Html.EditorFor(model => model.Qty, new { htmlAttributes = new { @class = "form-control" } })
+                                            @Html.ValidationMessageFor(model => model.Qty, "", new { @class = "text-danger" })
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            @Html.LabelFor(model => model.Description, htmlAttributes: new { @class = "bmd-label-floating" })
+                                            @Html.EditorFor(model => model.Description, new { htmlAttributes = new { @class = "form-control" } })
+                                            @Html.ValidationMessageFor(model => model.Description, "", new { @class = "text-danger" })
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            @Html.LabelFor(model => model.CategoryID, htmlAttributes: new { @class = "control-label col-md-2" })
+                                            @Html.DropDownList("CategoryID", null, "Chọn loại sản phẩm", htmlAttributes: new { @class = "form-control" })
+                                            @Html.ValidationMessageFor(model => model.CategoryID, "", new { @class = "text-danger" })
+                                        </div>
+                                    </div>
+                                </div>
+                                @*Capsule*@
+                                <div class="row" id="Capsule" style="display:none">
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            @Html.LabelFor(model => model.CapsuleSize, htmlAttributes: new { @class = "bmd-label-floating" })
+                                            @Html.EditorFor(model => model.CapsuleSize, new { htmlAttributes = new { @class = "form-control" } })
+                                            @Html.ValidationMessageFor(model => model.CapsuleSize, "", new { @class = "text-danger" })
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            @Html.LabelFor(model => model.MachineDimension, htmlAttributes: new { @class = "bmd-label-floating" })
+                                            @Html.EditorFor(model => model.MachineDimension, new { htmlAttributes = new { @class = "form-control" } })
+                                            @Html.ValidationMessageFor(model => model.MachineDimension, "", new { @class = "text-danger" })
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            @Html.LabelFor(model => model.ProductionOutput, htmlAttributes: new { @class = "bmd-label-floating" })
+                                            @Html.EditorFor(model => model.ProductionOutput, new { htmlAttributes = new { @class = "form-control" } })
+                                            @Html.ValidationMessageFor(model => model.ProductionOutput, "", new { @class = "text-danger" })
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            @Html.LabelFor(model => model.ShippingWeight, htmlAttributes: new { @class = "bmd-label-floating" })
+                                            @Html.EditorFor(model => model.ShippingWeight, new { htmlAttributes = new { @class = "form-control" } })
+                                            @Html.ValidationMessageFor(model => model.ShippingWeight, "", new { @class = "text-danger" })
+                                        </div>
+                                    </div>
+                                </div>
+                                @*sađasssssssssssss*@
+                            <div class="row" id="Tablet" style="display:none">
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        @Html.LabelFor(model => model.NumberOfDies, htmlAttributes: new { @class = "bmd-label-floating" })
+                                        @Html.EditorFor(model => model.NumberOfDies, new { htmlAttributes = new { @class = "form-control" } })
+                                        @Html.ValidationMessageFor(model => model.NumberOfDies, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        @Html.LabelFor(model => model.ProductionCapacity, htmlAttributes: new { @class = "bmd-label-floating" })
+                                        @Html.EditorFor(model => model.ProductionCapacity, new { htmlAttributes = new { @class = "form-control" } })
+                                        @Html.ValidationMessageFor(model => model.ProductionCapacity, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        @Html.LabelFor(model => model.DiameterOfTheTablets, htmlAttributes: new { @class = "bmd-label-floating" })
+                                        @Html.EditorFor(model => model.DiameterOfTheTablets, new { htmlAttributes = new { @class = "form-control" } })
+                                        @Html.ValidationMessageFor(model => model.DiameterOfTheTablets, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        @Html.LabelFor(model => model.ThicknessOfTablet, htmlAttributes: new { @class = "bmd-label-floating" })
+                                        @Html.EditorFor(model => model.ThicknessOfTablet, new { htmlAttributes = new { @class = "form-control" } })
+                                        @Html.ValidationMessageFor(model => model.ThicknessOfTablet, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        @Html.LabelFor(model => model.MaxPressure, htmlAttributes: new { @class = "bmd-label-floating" })
+                                        @Html.EditorFor(model => model.MaxPressure, new { htmlAttributes = new { @class = "form-control" } })
+                                        @Html.ValidationMessageFor(model => model.MaxPressure, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        @Html.LabelFor(model => model.NumberOfFillingStations, htmlAttributes: new { @class = "bmd-label-floating" })
+                                        @Html.EditorFor(model => model.NumberOfFillingStations, new { htmlAttributes = new { @class = "form-control" } })
+                                        @Html.ValidationMessageFor(model => model.NumberOfFillingStations, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        @Html.LabelFor(model => model.Weight, htmlAttributes: new { @class = "bmd-label-floating" })
+                                        @Html.EditorFor(model => model.Weight, new { htmlAttributes = new { @class = "form-control" } })
+                                        @Html.ValidationMessageFor(model => model.Weight, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        @Html.LabelFor(model => model.Height, htmlAttributes: new { @class = "bmd-label-floating" })
+                                        @Html.EditorFor(model => model.Height, new { htmlAttributes = new { @class = "form-control" } })
+                                        @Html.ValidationMessageFor(model => model.Height, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        @Html.LabelFor(model => model.Width, htmlAttributes: new { @class = "bmd-label-floating" })
+                                        @Html.EditorFor(model => model.Width, new { htmlAttributes = new { @class = "form-control" } })
+                                        @Html.ValidationMessageFor(model => model.Width, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                                <div class="col-md-12">
+                                    <div class="form-group">
+                                        @Html.LabelFor(model => model.Depth, htmlAttributes: new { @class = "bmd-label-floating" })
+                                        @Html.EditorFor(model => model.Depth, new { htmlAttributes = new { @class = "form-control" } })
+                                        @Html.ValidationMessageFor(model => model.Depth, "", new { @class = "text-danger" })
+                                    </div>
+                                </div>
+                            </div>
+@*1111111111111111*@
+                                <div class="row" id="Liquid" style="display:none">
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            @Html.LabelFor(model => model.Output, htmlAttributes: new { @class = "bmd-label-floating" })
+                                            @Html.EditorFor(model => model.Output, new { htmlAttributes = new { @class = "form-control" } })
+                                            @Html.ValidationMessageFor(model => model.Output, "", new { @class = "text-danger" })
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            @Html.LabelFor(model => model.DirectionOfMovement, htmlAttributes: new { @class = "bmd-label-floating" })
+                                            @Html.EditorFor(model => model.DirectionOfMovement, new { htmlAttributes = new { @class = "form-control" } })
+                                            @Html.ValidationMessageFor(model => model.DirectionOfMovement, "", new { @class = "text-danger" })
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            @Html.LabelFor(model => model.FullSize, htmlAttributes: new { @class = "bmd-label-floating" })
+                                            @Html.EditorFor(model => model.FullSize, new { htmlAttributes = new { @class = "form-control" } })
+                                            @Html.ValidationMessageFor(model => model.FullSize, "", new { @class = "text-danger" })
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            @Html.LabelFor(model => model.HeightOfConveyor, htmlAttributes: new { @class = "bmd-label-floating" })
+                                            @Html.EditorFor(model => model.HeightOfConveyor, new { htmlAttributes = new { @class = "form-control" } })
+                                            @Html.ValidationMessageFor(model => model.HeightOfConveyor, "", new { @class = "text-danger" })
+                                        </div>
+                                    </div>
+                                </div>
+                                <button type="submit" value="Create" class="btn btn-primary pull-right">Hoàn thành</button>
+                                <div class="clearfix"></div>
+                            </form>
+                            <div>
+                                <p>@Html.ActionLink("Back to List", "Index")</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        }
+    </div>
+</div>
+<script>
+    document.getElementById("CategoryID").onchange = function () { chon() };
+    function chon() {
+        var x = parseInt(document.getElementById("CategoryID").value);
+        switch (x) {
+            case 1:
+                $("#Capsule").show();
+                $("#Tablet").hide();
+                $("#Liquid").hide();
+                break;
+            case 2:
+                $("#Capsule").hide();
+                $("#Tablet").show();
+                $("#Liquid").hide();
+                break;
+            case 3:
+                $("#Capsule").hide();
+                $("#Tablet").hide();
+                $("#Liquid").show();
+                break;
+        }
+    }
+</script>

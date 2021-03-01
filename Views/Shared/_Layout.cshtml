@@ -1,0 +1,48 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Pharma &mdash; Colorlib Template</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css?family=Rubik:400,700|Crimson+Text:400,400i" rel="stylesheet">
+
+
+    <link href="~/Asset/fonts/icomoon/style.css" rel="stylesheet" />
+
+    <link href="~/Asset/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Asset/css/magnific-popup.css" rel="stylesheet" />
+    <link href="~/Asset/css/jquery-ui.css" rel="stylesheet" />
+    <link href="~/Asset/css/owl.carousel.min.css" rel="stylesheet" />
+    <link href="~/Asset/css/owl.theme.default.min.css" rel="stylesheet" />
+
+
+    <link href="~/Asset/css/aos.css" rel="stylesheet" />
+    <link href="~/Asset/css/style.css" rel="stylesheet" />
+
+
+
+</head>
+<body>
+
+    @Html.Partial("~/Views/Shared/Header.cshtml")
+    @RenderBody()
+    @Html.Partial("~/Views/Shared/Footer.cshtml")
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+
+    <script src="~/Asset/js/jquery-3.3.1.min.js"></script>
+    <script src="~/Asset/js/jquery-ui.js"></script>
+    <script src="~/Asset/js/popper.min.js"></script>
+    <script src="~/Asset/js/bootstrap.min.js"></script>
+    <script src="~/Asset/js/owl.carousel.min.js"></script>
+    <script src="~/Asset/js/jquery.magnific-popup.min.js"></script>
+    <script src="~/Asset/js/aos.js"></script>
+
+    <script src="~/Asset/js/main.js"></script>
+
+
+</body>
+</html>
